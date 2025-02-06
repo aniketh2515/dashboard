@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="user-management.html">User Management</a></li>
+            <li><a href="excel-integration.html">Excel Integration</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+        <p>Welcome to the Admin Dashboard. Use the sidebar to navigate through different sections.</p>
+
+        <!-- Overview Section -->
+        <section id="overview" class="overview-section">
+            <h2>Dashboard Overview</h2>
+            <p>Key insights and statistics related to the platform's performance.</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <img src="users-icon-png-13.jpg" alt="Total Users" class="stat-img">
+                    <h3>Total Users</h3>
+                    <p>1200</p>
+                </div>
+                <div class="stat-card">
+                    <img src="user-activites.png" alt="Active Users" class="stat-img">
+                    <h3>Active Users</h3>
+                    <p>850</p>
+                </div>
+                <div class="stat-card">
+                    <img src="reg.jpeg" alt="New Registrations" class="stat-img">
+                    <h3>New Registrations</h3>
+                    <p>50</p>
+                </div>
+                <div class="stat-card">
+                    <img src="reve.jpeg" alt="Monthly Revenue" class="stat-img">
+                    <h3>Monthly Revenue</h3>
+                    <p>$25,000</p>
+                </div>
+            </div>
+
+            <div class="charts">
+                <h3>Performance Charts</h3>
+                <canvas id="userChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

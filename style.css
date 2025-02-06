@@ -1,0 +1,706 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body and Global Styles */
+body {
+    background-color: #F4F7FA;
+    color: #273342;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #273342;
+    color: #FFF;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #FFD46B;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* Header */
+header h1 {
+    font-size: 32px;
+    color: #273342;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Overview Section */
+.overview-section {
+    background: linear-gradient(135deg, #55ADFF 0%, #FFD46B 100%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.overview-section h2 {
+    font-size: 36px;
+    color: #273342;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.overview-section p {
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Stats Cards */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat-card {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    width: 22%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.stat-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #f9fafb;
+}
+
+.stat-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover img {
+    transform: scale(1.1);
+}
+
+.stat-card h3 {
+    font-size: 1.3rem;
+    color: #273342;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #273342;
+}
+
+/* Performance Chart */
+.charts {
+    margin-top: 50px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 400px !important;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* User Management Section */
+#user-management {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#user-management h2 {
+    font-size: 28px;
+    color: #273342;
+    margin-bottom: 20px;
+}
+
+#user-management p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+#user-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#user-management table th, #user-management table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#user-management table th {
+    background-color: #f9f9f9;
+}
+
+#user-management button {
+    background-color: #55ADFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#user-management button:hover {
+    background-color: #FFD46B;
+}
+
+/* Excel Integration Section */
+#excel-integration {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#excel-integration h2 {
+    font-size: 28px;
+    color: #273342;
+    margin-bottom: 20px;
+}
+
+#excel-integration p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+#excel-integration input[type="file"] {
+    padding: 10px;
+    background-color: #F1F3F5;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#excel-integration button {
+    background-color: #55ADFF;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#excel-integration button:hover {
+    background-color: #FFD46B;
+}
+
+/* Chatbot Section */
+#chatbot {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#chatbot h2 {
+    font-size: 28px;
+    color: #273342;
+    margin-bottom: 20px;
+}
+
+#chatbot .chat-window {
+    background-color: #F9FAFB;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#chatbot .messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    max-height: 300px;
+}
+
+#chatbot .messages div {
+    margin-bottom: 15px;
+    color: #273342;
+}
+
+#chatbot input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    margin-right: 10px;
+}
+
+#chatbot button {
+    background-color: #55ADFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#chatbot button:hover {
+    background-color: #FFD46B;
+}
+
+/* Animations for Chatbot */
+@keyframes bounce {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#chatbot button {
+    animation: bounce 0.5s ease;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1200px) {
+    .stat-card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-section {
+        padding: 30px;
+    }
+
+    .sidebar {
+        width: 150px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .stat-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #chatbot input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+/* Excel Integration Section Styles */
+#excel-integration {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#excel-integration h2 {
+    font-size: 28px;
+    color: #273342;
+    margin-bottom: 20px;
+}
+
+#excel-integration p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/* File Upload Section */
+#excel-integration .upload-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#excel-integration input[type="file"] {
+    padding: 12px;
+    background-color: #F1F3F5;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 70%;
+    transition: border-color 0.3s ease;
+}
+
+#excel-integration input[type="file"]:hover {
+    border-color: #55ADFF;
+}
+
+#excel-integration button {
+    background-color: #55ADFF;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#excel-integration button:hover {
+    background-color: #FFD46B;
+    transform: translateY(-5px);
+}
+
+#excel-integration button:active {
+    transform: translateY(2px);
+}
+
+/* Animation for buttons */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#excel-integration button {
+    animation: fadeInButton 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #excel-integration .upload-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #excel-integration input[type="file"] {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Overall Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F4F7FE;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #273342;
+    color: white;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transition: width 0.3s ease;
+}
+
+.sidebar h2 {
+    color: #FFD46B;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: center;
+}
+
+.sidebar ul li a:hover {
+    background-color: #FFD46B;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+h1 {
+    color: #273342;
+}
+
+/* Section Styles */
+.section {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Excel Integration Section */
+#excel-integration {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#excel-integration h2 {
+    font-size: 28px;
+    color: #273342;
+    margin-bottom: 20px;
+}
+
+#excel-integration p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+#excel-integration .upload-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#excel-integration input[type="file"] {
+    padding: 12px;
+    background-color: #F1F3F5;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 70%;
+    transition: border-color 0.3s ease;
+}
+
+#excel-integration input[type="file"]:hover {
+    border-color: #55ADFF;
+}
+
+#excel-integration button {
+    background-color: #55ADFF;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#excel-integration button:hover {
+    background-color: #FFD46B;
+    transform: translateY(-5px);
+}
+
+#excel-integration button:active {
+    transform: translateY(2px);
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#excel-integration button {
+    animation: fadeInButton 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    #excel-integration .upload-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #excel-integration input[type="file"] {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Chatbot Styles */
+#chatbot {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.chat-window {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.messages div {
+    margin-bottom: 10px;
+}
+
+.messages div:last-child {
+    margin-bottom: 0;
+}
+
+#chat-input {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#send-btn {
+    padding: 12px 20px;
+    background-color: #55ADFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #FFD46B;
+}
+
+#chat-input:focus, #send-btn:focus {
+    outline: none;
+}
+
+#chat-input::placeholder {
+    color: #aaa;
+}
+
+#send-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    #chat-input {
+        width: 70%;
+    }
+
+    #send-btn {
+        width: 25%;
+    }
+}
